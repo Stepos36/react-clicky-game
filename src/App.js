@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardBoard from "./components/CardBoard";
-import images from './components/images.json';
+import images from './images.json';
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import ScoreRow from "./components/ScoreRow";
