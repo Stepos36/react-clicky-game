@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Stepos36/react-clicky-game/precache-manifest.9b27aee8c6d35eae2b44a633677895e9.js"
+  "/react-clicky-game/precache-manifest.c86ec8be91771314d8368bf86c90f4ca.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Stepos36/react-clicky-game/index.html", {
+workbox.routing.registerNavigationRoute("/react-clicky-game/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
