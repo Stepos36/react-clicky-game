@@ -1,7 +1,7 @@
 {
   "name": "React-Clicky-Game",
   "version": "0.1.0",
-  "homepage": "https://nelasov.me/react-clicky-game/",
+  "homepage": "https://nelasov.me/react-clicky-game",
   "private": true,
   "dependencies": {
     "animejs": "^3.0.1",
