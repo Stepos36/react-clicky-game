@@ -1,9 +1,11 @@
 {
-  "name": "my-app",
+  "name": "React-Clicky-Game",
   "version": "0.1.0",
+  "homepage": "https://nelasov.me/react-clicky-game/",
   "private": true,
   "dependencies": {
     "animejs": "^3.0.1",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-responsive-modal": "^3.6.0",
@@ -13,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,11 +35,10 @@
     "type": "git",
     "url": "git+https://github.com/Stepos36/react-clicky-game.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react", "clicky", "rutgers", "bootcamp"],
+  "author": "Stepan Nelasov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Stepos36/react-clicky-game/issues"
-  },
-  "homepage": "https://github.com/Stepos36/react-clicky-game#readme"
+  }
 }
