@@ -10,17 +10,16 @@ class App extends Component {
   }
 
   backToZero = () => {
-    this.setState({score: 0})
+    this.setState({score: 0});
     this.setState({clickedIcons: []})
   }
 
   handleClick = id => {
     if(this.state.clickedIcons.includes(id)) {
-      alert('loss')
       this.backToZero()
+
     }
     else if (this.state.score == 23) {
-      alert('win')
       this.backToZero()
     }
     else {
@@ -29,7 +28,17 @@ class App extends Component {
       console.log(this.state.score)
       console.log(this.state.clickedIcons)
     }
+    this.shuffle(this.state.images)
   }
+
+  //https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+  shuffle = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
   render() {
     return (
