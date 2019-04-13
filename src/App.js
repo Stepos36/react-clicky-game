@@ -30,6 +30,7 @@ class App extends Component {
 
   onCloseModal = () => {
     this.setState({ open: false });
+    this.backToZero();
   };
 
   restartGame = () => {
