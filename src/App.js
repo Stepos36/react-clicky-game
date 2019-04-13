@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import CardBoard from "./components/CardBoard";
 import images from './components/images.json';
+import anime from 'animejs';
+import Modal from "react-responsive-modal";
 
 class App extends Component {
   state = {
     score: 0,
     images,
-    clickedIcons: []
+    clickedIcons: [],
+    titleMsg: '',
+    open: false
   }
 
   backToZero = () => {
@@ -14,21 +18,46 @@ class App extends Component {
     this.setState({clickedIcons: []})
   }
 
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
+
+  restartGame = () => {
+    this.backToZero();
+    this.render();
+    this.onCloseModal()
+  }
+
   handleClick = id => {
     if(this.state.clickedIcons.includes(id)) {
-      this.backToZero()
-
+      anime({
+        targets: '.icon',
+        translateX: anime.stagger(10, {grid: [6, 4], from: 'center', axis: 'x'}),
+        translateY: anime.stagger(10, {grid: [6, 4], from: 'center', axis: 'y'}),
+        rotateZ: anime.stagger([0, 135], {grid: [6, 4], from: 'center', axis: 'x'}),
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop: 1,
+        duration: 1000
+      });
+      this.setState({titleMsg: 'You lose!'})
+      this.onOpenModal()
     }
-    else if (this.state.score == 23) {
-      this.backToZero()
+    else if (this.state.score === 23) {
+      this.onOpenModal()
+      this.setState({titleMsg: 'You win!'})
     }
     else {
       this.state.clickedIcons.push(id)
       this.setState({ score: this.state.score + 1 })
       console.log(this.state.score)
       console.log(this.state.clickedIcons)
+      this.shuffle(this.state.images)
     }
-    this.shuffle(this.state.images)
   }
 
   //https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
@@ -41,10 +70,21 @@ class App extends Component {
 }
 
   render() {
+    const { open } = this.state;
     return (
       <div className="App">
         <CardBoard handleClick = {this.handleClick} score = {this.state.score} images={this.state.images}/> 
+        <div>
+        <Modal open={open} onClose={this.onCloseModal} center>
+          <h2>{this.state.titleMsg}</h2>
+          <p>
+            You scored {this.state.score} clicks.
+          </p>
+          <button className='btn btn-info' onClick={() => this.restartGame()}>Play again</button>
+        </Modal>
       </div>
+      </div>
+      
     );
   }
 }
