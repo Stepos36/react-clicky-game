@@ -2,122 +2,122 @@
     {
       "id": 1,
       "title": "Messages",
-      "image": "/images/1.png"
+      "image": "./images/1.png"
     },
     {
       "id": 2,
       "title": "Calendar",
-      "image": "/images/2.png"
+      "image": "./images/2.png"
     },
     {
       "id": 3,
       "title": "Photos",
-      "image": "/images/3.png"
+      "image": "./images/3.png"
     },
     {
       "id": 4,
       "title": "Camera",
-      "image": "/images/4.png"
+      "image": "./images/4.png"
     },
     {
       "id": 5,
       "title": "Weather",
-      "image": "/images/5.png"
+      "image": "./images/5.png"
     },
     {
       "id": 6,
       "title": "Clock",
-      "image": "/images/6.png"
+      "image": "./images/6.png"
     },
     {
       "id": 7,
       "title": "Notes",
-      "image": "/images/7.png"
+      "image": "./images/7.png"
     },
     {
       "id": 8,
       "title": "Reminder",
-      "image": "/images/8.png"
+      "image": "./images/8.png"
     },
     {
       "id": 9,
       "title": "Stocks",
-      "image": "/images/9.png"
+      "image": "./images/9.png"
     },
     {
       "id": 10,
       "title": "Videos",
-      "image": "/images/10.png"
+      "image": "./images/10.png"
     },
     {
       "id": 11,
       "title": "Game center",
-      "image": "/images/11.png"
+      "image": "./images/11.png"
     },
     {
       "id": 12,
       "title": "Calculator",
-      "image": "/images/12.png"
+      "image": "./images/12.png"
     },
     {
       "id": 13,
       "title": "Maps",
-      "image": "/images/13.png"
+      "image": "./images/13.png"
     },
     {
       "id": 14,
       "title": "iTunes",
-      "image": "/images/14.png"
+      "image": "./images/14.png"
     },
     {
       "id": 15,
       "title": "AppStore",
-      "image": "/images/15.png"
+      "image": "./images/15.png"
     },
     {
       "id": 16,
       "title": "Passbook",
-      "image": "/images/16.png"
+      "image": "./images/16.png"
     },
     {
       "id": 17,
       "title": "Apple Music",
-      "image": "/images/17.png"
+      "image": "./images/17.png"
     },
     {
       "id": 18,
       "title": "Safari",
-      "image": "/images/18.png"
+      "image": "./images/18.png"
     },
     {
       "id": 19,
       "title": "Compass",
-      "image": "/images/19.png"
+      "image": "./images/19.png"
     },
     {
       "id": 20,
       "title": "Settings",
-      "image": "/images/20.png"
+      "image": "./images/20.png"
     },
     {
       "id": 21,
       "title": "Contacts",
-      "image": "/images/21.png"
+      "image": "./images/21.png"
     },
     {
       "id": 22,
       "title": "Facetime",
-      "image": "/images/22.png"
+      "image": "./images/22.png"
     },
     {
       "id": 23,
       "title": "Mail",
-      "image": "/images/23.png"
+      "image": "./images/23.png"
     },
     {
       "id": 24,
       "title": "Phone",
-      "image": "/images/24.png"
+      "image": "./images/24.png"
     }
   ]
   

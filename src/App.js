@@ -64,8 +64,6 @@ class App extends Component {
     else {
       this.state.clickedIcons.push(id)
       this.setState({ score: this.state.score + 1 })
-      console.log(this.state.score)
-      console.log(this.state.clickedIcons)
       this.shuffle(this.state.images)
       this.setState({ signClass: 'win' });
       setTimeout(() => {
