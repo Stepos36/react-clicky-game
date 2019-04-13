@@ -1,35 +1,27 @@
 import React, { Component } from 'react';
 import Card from './../Card';
-import './CardBoard.css'
+import './CardBoard.css';
 
 export class CardBoard extends Component {
   render() {
     const keys = [0,1,2,3]
-    const images1 = this.props.images.slice(0,6)
-    const images2 = this.props.images.slice(6,12)
-    const images3 = this.props.images.slice(12,18)
-    const images4 = this.props.images.slice(18,24)
+    const images = [
+      this.props.images.slice(0,6),
+      this.props.images.slice(6,12),
+      this.props.images.slice(12,18),
+      this.props.images.slice(18,24),
+    ]
+    var pArray = []
+    for (var i=0;i<keys.length;i++) {
+      pArray.push(<p key={'p'+keys[i]}>{
+        images[i].map((image) => (
+          <Card handleClick = {this.props.handleClick} key={image.id} image={image} />
+        ))
+        }</p>)
+    }
     return [
-        <p key={'p'+keys[0]}>{
-        images1.map((image) => (
-          <Card key={image.id} image={image} />
-        ))
-        }</p>,
-        <p key={'p'+keys[1]}>{ 
-        images2.map((image) => (
-          <Card key={image.id} image={image} />
-        ))
-        }</p>,
-        <p key={'p'+keys[2]}>{
-        images3.map((image) => (
-        <Card key={image.id} image={image} />
-        ))
-        }</p>,
-        <p key={'p'+keys[3]}>{ 
-        images4.map((image) => (
-          <Card key={image.id} image={image} />
-        ))
-        }</p>]
+        pArray,
+         'Score:' + this.props.score]
   }
 }
 
