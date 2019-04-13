@@ -23,5 +23,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stepos36/react-clicky-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stepos36/react-clicky-game/issues"
+  },
+  "homepage": "https://github.com/Stepos36/react-clicky-game#readme"
 }

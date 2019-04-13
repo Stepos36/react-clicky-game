@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import CardBoard from "./components/CardBoard";
 import images from './components/images.json';
+import Navbar from "./components/Navbar";
+import Wrapper from "./components/Wrapper";
+import ScoreRow from "./components/ScoreRow";
+import Footer from "./components/Footer";
 import anime from 'animejs';
 import Modal from "react-responsive-modal";
+import './App.css'
 
 class App extends Component {
   state = {
@@ -10,7 +15,8 @@ class App extends Component {
     images,
     clickedIcons: [],
     titleMsg: '',
-    open: false
+    open: false,
+    signClass: 'neutral'
   }
 
   backToZero = () => {
@@ -46,6 +52,10 @@ class App extends Component {
       });
       this.setState({titleMsg: 'You lose!'})
       this.onOpenModal()
+      this.setState({ signClass: 'lose' });
+      setTimeout(() => {
+        this.setState({ signClass: 'neutral' });
+      }, 500)
     }
     else if (this.state.score === 23) {
       this.onOpenModal()
@@ -57,6 +67,10 @@ class App extends Component {
       console.log(this.state.score)
       console.log(this.state.clickedIcons)
       this.shuffle(this.state.images)
+      this.setState({ signClass: 'win' });
+      setTimeout(() => {
+        this.setState({signClass: 'neutral'})
+      }, 500)
     }
   }
 
@@ -73,7 +87,10 @@ class App extends Component {
     const { open } = this.state;
     return (
       <div className="App">
-        <CardBoard handleClick = {this.handleClick} score = {this.state.score} images={this.state.images}/> 
+      <Navbar/>
+        <ScoreRow class={this.state.signClass} score={this.state.score} />
+      <Wrapper>
+        <CardBoard images={this.state.images}  handleClick = {this.handleClick}  /> 
         <div>
         <Modal open={open} onClose={this.onCloseModal} center>
           <h2>{this.state.titleMsg}</h2>
@@ -83,6 +100,8 @@ class App extends Component {
           <button className='btn btn-info' onClick={() => this.restartGame()}>Play again</button>
         </Modal>
       </div>
+      </Wrapper>
+      <Footer />
       </div>
       
     );

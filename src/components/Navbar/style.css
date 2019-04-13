@@ -1,0 +1,30 @@
+nav.navbar.navbar-default {
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: rgba(53,84,100, 0.7) !important;
+  height: 70px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.navbar-brand {
+  font-family: 'Luckiest Guy';
+  font-size: 3rem;
+  color: rgb(52,176,165) !important
+}
+
+li {
+  margin-right: 20px;
+  font-size: 1.2rem; 
+}
+
+li a {
+  color: rgb(52,176,165)
+}
+
+li a:hover {
+  color: rgb(82,206,195);
+  text-decoration: none
+}

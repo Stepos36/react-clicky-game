@@ -20,8 +20,9 @@ export class CardBoard extends Component {
         }</p>)
     }
     return [
-        pArray,
-         'Score:' + this.props.score]
+      <div className="cardBoard" key="div0">
+        {pArray}
+      </div>]
   }
 }
 

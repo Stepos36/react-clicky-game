@@ -1,0 +1,14 @@
+.scoreRow {
+    margin-top: 85px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white
+}
+
+.win {
+    color:green
+}
+
+.lose {
+    color: red
+}
