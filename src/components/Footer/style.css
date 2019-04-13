@@ -4,12 +4,11 @@
 }
 
 .footer span {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
   left: 0;
-  right: 0;
-  padding: 7px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
   background-color: rgba(53,84,100, 0.7) !important;
   color: rgb(211,255,255)
 

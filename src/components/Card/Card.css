@@ -13,3 +13,29 @@ img:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
     filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
+
+@media only screen and (max-width: 992px) {
+    img {
+        width: 95px;
+        margin: 8px 17px
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    img {
+        width: 75px;
+        margin: 5px 9px
+    }
+  }
+  @media only screen and (max-width: 571px) {
+    img {
+        width: 60px;
+        margin: 4px 5px
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    img {
+        width: 50px;
+        margin: 3px 4px
+    }
+  }
+  
