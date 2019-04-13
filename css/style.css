@@ -1,0 +1,15 @@
+html, body {
+    background: url('http://cdn.osxdaily.com/wp-content/uploads/2017/06/ios-11-default-wallpaper.jpg');
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: table;
+    height: 100%;
+    position: relative;
+    width:100%;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   font-family: 'Noto Serif', serif;
+}
