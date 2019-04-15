@@ -35,7 +35,12 @@
     "type": "git",
     "url": "git+https://github.com/Stepos36/react-clicky-game.git"
   },
-  "keywords": ["react", "clicky", "rutgers", "bootcamp"],
+  "keywords": [
+    "react",
+    "clicky",
+    "rutgers",
+    "bootcamp"
+  ],
   "author": "Stepan Nelasov",
   "license": "ISC",
   "bugs": {

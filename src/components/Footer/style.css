@@ -6,7 +6,7 @@
 .footer span {
   position: fixed;
   left: 0;
-  bottom: 8px;
+  bottom: 0;
   width: 100%;
   text-align: center;
   background-color: rgba(53,84,100, 0.7) !important;
